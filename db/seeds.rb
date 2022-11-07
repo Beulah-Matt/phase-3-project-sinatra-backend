@@ -2,8 +2,9 @@ puts "Deleting old data..."
 Product.destroy_all
 
 puts "Creating categories"
-category1 = Category.create(name: "Fridge")
-category2 = Category.create(name: "Smartphone")
+category1 = Category.create(name: "fridge")
+category2 = Category.create(name: "smartphone")
+category3 = Category.create(name: "camera")
 
 puts "Creating fridges..."
 product1 = Product.create(name: "LG French Door", image_url: "https://i.postimg.cc/jS35xfsk/lgfrench.png", 
@@ -48,6 +49,31 @@ product10 = Product.create(name: "Redmi Note 10", image_url: "https://i.postimg.
     description: "50MP | 5000mAh | NanoSim | Android 12 OS | 128GB 3GB RAM | LTE
     ")
 
+puts "Creating Cameras..."
+product11 = Product.create(name: "Canon EOS R6", image_url: "https://i.postimg.cc/hPfTR4D9/EOS6.jpg",
+price: 336000, category_id: category3.id, 
+description: "20MP | 4k upto 60p | ISO 102,400 | 20fps Silent Shooting
+")
+product12 = Product.create(name: "Fujifilm X-T4", image_url: "https://i.postimg.cc/Z5Nb62Hk/fujifilm.jpg",
+price: 220000, category_id: category3.id, 
+description: "26.1MP | 30fps | ISO 160 - 12800 | Intelligent Hybrid AF
+")
+product13 = Product.create(name: "https://i.postimg.cc/tT3nD7zj/nikonZ50.jpg",
+price: 100000, category_id: category3.id, 
+description: "20.9MP | Mirrorless | 3.1x zoom | UHD 4K resolution
+")
+product14 = Product.create(name: "Canon EOS M50 Mark II", image_url: "https://i.postimg.cc/02f3FfN6/M50markii.jpg",
+price: 76000, category_id: category3.id, 
+description: "24.1MP | 4K | Live YouTube Streaming
+")
+product15 = Product.create(name: "Panasonic LUMIX FZ80", image_url: "https://i.postimg.cc/QMMf2Gyw/panasonic.jpg",
+price: 50000, category_id: category3.id, 
+description: "18.1MP | High resolution view finder | 5.9 Apeture
+")
+product16 = Product.create(name: "Hasselblad X2D 100c", image_url: "https://i.postimg.cc/GtP1tT1H/hasselblad.jpg",
+price: 1000000, category_id: category3.id, 
+description: "100 MP  | CMOS sensor | ISO 64-25,600 | Hasselblad Natural Colour Solution.
+")
 
 puts "✅ Done seeding!"
 
