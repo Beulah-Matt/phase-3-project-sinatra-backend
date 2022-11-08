@@ -113,6 +113,21 @@ price: 102000 , category_id: category4.id,
 description: "Windows 11 home |12th Generation Intel® Core™ i7 processor | Intel® Iris® Xᵉ Graphics | 8GB memory; 512GB SSD storage | 
 15.6-inch UHD display"
 )
+
+puts "Creating customers..."
+customer1 = Customer.create(name: "Jeremy", email: "jeremy@inti.org")
+customer2 = Customer.create(name: "Dennis", email: "dennis@gmail.com")
+customer3 = Customer.create(name: "Aria", email: "aria@gmail.com")
+customer4 = Customer.create(name: "Rioba", email: "rioba@info.travel.org")
+customer5 = Customer.create(name: "Hannah", email: "hunbunny@yahoo.com")
+
+puts "Creating orders..."
+order1 = Order.create(product_id: product7.id, customer_id: customer1.id)
+order2 = Order.create(product_id: product15.id, customer_id: customer1.id)
+order3 = Order.create(product_id: product7.id, customer_id: customer2.id)
+order4 = Order.create(product_id: product1.id, customer_id: customer1.id)
+order5 = Order.create(product_id: product20.id, customer_id: customer5.id)
+
 puts "✅ Done seeding!"
 
 #name, image, price, category_id, description
