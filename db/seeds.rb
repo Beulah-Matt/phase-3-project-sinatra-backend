@@ -5,6 +5,7 @@ puts "Creating categories"
 category1 = Category.create(name: "fridge")
 category2 = Category.create(name: "smartphone")
 category3 = Category.create(name: "camera")
+category4 = Category.create(name: "laptop")
 
 puts "Creating fridges..."
 product1 = Product.create(name: "LG French Door", image_url: "https://i.postimg.cc/jS35xfsk/lgfrench.png", 
@@ -75,6 +76,43 @@ price: 1000000, category_id: category3.id,
 description: "100 MP  | CMOS sensor | ISO 64-25,600 | Hasselblad Natural Colour Solution.
 ")
 
+puts "Creating Laptops..."
+
+product17 = Product.create(name: "Lenovo Thinkpad T15", image_url: "https://i.postimg.cc/VLtRzQVp/lenovo-think-t-series-feature-2.webp",
+price: 164000 , category_id: category4.id,
+description: "Up to 11th Gen Intel® Core™ i7 vPro processors | luminous 15'
+ display with Dolby Vision™ UHD resolution | Windows 11 Pro | 16GB RAM 512GB SSD"
+)
+product18 = Product.create(name: "Apple MacBook Air (M2)", image_url: "https://i.postimg.cc/qRw4S585/macair2.jpg",
+price: 170000 , category_id: category4.id,
+description: "8-Core CPU | 10-Core GPU | 8GB Unified Memory |256GB SSD Storage¹ |
+13.6-inch Liquid Retina display with True Tone| Two Thunderbolt / USB 4 ports"
+)
+product19 = Product.create(name: "Apple MacBook Pro", image_url: "https://i.postimg.cc/HL7tSGCT/macbookpro.jpg",
+price: 215000 , category_id: category4.id,
+description: "Apple M2 chip | 10-Core GPU | 8GB Unified Memory |256GB SSD Storage¹ |
+13.6-inch Liquid Retina display with True Tone| Two Thunderbolt / USB 4 ports"
+)
+product20 = Product.create(name: "HP Spectre X360 14", image_url: "https://i.postimg.cc/Xvz96s4Q/hpspectre.jpg",
+price: 242000 , category_id: category4.id,
+description: "Windows 11 Home | 12th Generation Intel® Core™ i7 processor | Intel® Iris® Xᵉ Graphics | 16GB memory; 512 GB SSD storage | 
+13.5' diagonal WUXGA+ touch display"
+)
+product21 = Product.create(name: "Asus ROG Zephyrus G15", image_url: "https://i.postimg.cc/Xvz96s4Q/hpspectre.jpg",
+price: 285000 , category_id: category4.id,
+description: "Windows 11 Pro | Processor. AMD Ryzen™ 9 6900HS Mobile Processor | NVIDIA® GeForce RTX™ 3070 Ti Laptop GPU 8GB GDDR6| 16GB memory; 1TB SSD storage | 
+15.6-inch WQHD (2560 x 1440) 16:9 anti-glare display"
+)
+product22 = Product.create(name: "Asus ROG Zephyrus G15", image_url: "https://i.postimg.cc/Xvz96s4Q/hpspectre.jpg",
+price: 285000 , category_id: category4.id,
+description: "Windows 11 Pro | Processor. AMD Ryzen™ 9 6900HS Mobile Processor | NVIDIA® GeForce RTX™ 3070 Ti Laptop GPU 8GB GDDR6| 16GB memory; 1TB SSD storage | 
+15.6-inch WQHD (2560 x 1440) 16:9 anti-glare display"
+)
+product23 = Product.create(name: "Asus Chromebook Flip CX5", image_url: "https://i.postimg.cc/YSHckBzC/asuschromebook.png",
+price: 102000 , category_id: category4.id,
+description: "Windows 11 home |12th Generation Intel® Core™ i7 processor | Intel® Iris® Xᵉ Graphics | 8GB memory; 512GB SSD storage | 
+15.6-inch UHD display"
+)
 puts "✅ Done seeding!"
 
 #name, image, price, category_id, description
