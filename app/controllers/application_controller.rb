@@ -36,9 +36,36 @@ class ApplicationController <Sinatra::Base
         product.to_json
     end
 
+    #orders endpoints
+
     get '/orders' do
         orders = Order.all
         orders.to_json
+    end
+
+    post '/orders' do
+        order= Order.create(
+          order_no: params[:order_no],
+          product_id: params[:product_id],
+          customer_id: params[:customer_id],
+        )
+        order.to_json
+    end
+
+    patch '/orders/:id' do
+        order = Order.find(params[:id])
+        order.update(
+            order_no: params[:order_no],
+            product_id: params[:product_id],
+            customer_id: params[:customer_id],
+        )
+        order.to_json
+    end
+
+    delete '/orders/:id' do
+        order = Order.find(params[:id])
+        order.destroy
+        order.to_json
     end
      
 end
