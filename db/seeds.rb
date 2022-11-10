@@ -31,7 +31,7 @@ product4 = Product.create(name: "Galaxy Buds 2", image_url: "https://i.postimg.c
    description: " Galaxy Buds2 opens a new world of sound with well-balanced audio, lightweight comfort fit, Active 
    Noise Cancellation, and seamless connectivity to your phone and watch
    ")
-product23 = Product.create(name: "Airpods Pro", image_url: "https://i.postimg.cc/Y9KSVCmH/airbud.png",
+product22 = Product.create(name: "Airpods Pro", image_url: "https://i.postimg.cc/Y9KSVCmH/airbud.png",
 price: 26999, category_id: category1.id, 
 description: " Active noise cancellation with Vent sytem for pressure equalization. Have fun when exercising with the 
 sweat and water resistant cover.
@@ -67,7 +67,7 @@ product12 = Product.create(name: "Fujifilm X-T4", image_url: "https://i.postimg.
 price: 220000, category_id: category3.id, 
 description: "26.1MP | 30fps | ISO 160 - 12800 | Intelligent Hybrid AF
 ")
-product13 = Product.create(name: "https://i.postimg.cc/tT3nD7zj/nikonZ50.jpg",
+product13 = Product.create(name: "Nikon Z50", image_url: "https://i.postimg.cc/MTzfw1gd/Nikon-Z50.jpg",
 price: 100000, category_id: category3.id, 
 description: "20.9MP | Mirrorless | 3.1x zoom | UHD 4K resolution
 ")
@@ -106,16 +106,12 @@ price: 242000 , category_id: category4.id,
 description: "Windows 11 Home | 12th Generation Intel® Core™ i7 processor | Intel® Iris® Xᵉ Graphics | 16GB memory; 512 GB SSD storage | 
 13.5' diagonal WUXGA+ touch display"
 )
-product21 = Product.create(name: "Asus ROG Zephyrus G15", image_url: "https://i.postimg.cc/Xvz96s4Q/hpspectre.jpg",
+product21 = Product.create(name: "Asus ROG Zephyrus G15", image_url: "https://i.postimg.cc/NGTkBxyk/asusrog.jpg",
 price: 285000 , category_id: category4.id,
 description: "Windows 11 Pro | Processor. AMD Ryzen™ 9 6900HS Mobile Processor | NVIDIA® GeForce RTX™ 3070 Ti Laptop GPU 8GB GDDR6| 16GB memory; 1TB SSD storage | 
 15.6-inch WQHD (2560 x 1440) 16:9 anti-glare display"
 )
-product22 = Product.create(name: "Asus ROG Zephyrus G15", image_url: "https://i.postimg.cc/Xvz96s4Q/hpspectre.jpg",
-price: 285000 , category_id: category4.id,
-description: "Windows 11 Pro | Processor. AMD Ryzen™ 9 6900HS Mobile Processor | NVIDIA® GeForce RTX™ 3070 Ti Laptop GPU 8GB GDDR6| 16GB memory; 1TB SSD storage | 
-15.6-inch WQHD (2560 x 1440) 16:9 anti-glare display"
-)
+
 product23 = Product.create(name: "Asus Chromebook Flip CX5", image_url: "https://i.postimg.cc/YSHckBzC/asuschromebook.png",
 price: 102000 , category_id: category4.id,
 description: "Windows 11 home |12th Generation Intel® Core™ i7 processor | Intel® Iris® Xᵉ Graphics | 8GB memory; 512GB SSD storage | 
