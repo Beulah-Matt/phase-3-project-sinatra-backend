@@ -1,5 +1,8 @@
 puts "Deleting old data..."
 Product.destroy_all
+Category.destroy_all
+Customer.destroy_all
+Order.destroy_all
 
 puts "Creating categories"
 category1 = Category.create(name: "fridge")
@@ -7,27 +10,32 @@ category2 = Category.create(name: "smartphone")
 category3 = Category.create(name: "camera")
 category4 = Category.create(name: "laptop")
 
-puts "Creating fridges..."
-product1 = Product.create(name: "LG French Door", image_url: "https://i.postimg.cc/jS35xfsk/lgfrench.png", 
-    price: 300000, category_id: category1.id, 
-    description: "LG 570L Slim French Door Refrigerator | Matte Black | InstaView Door-In-Door™
-    Total No Frost with Nature Fresh that manages humidity levels
+puts "Creating Headphones..."
+product1 = Product.create(name: "Bose Headphones 700", image_url: "https://i.postimg.cc/BvJDzNWp/bose700.jpg", 
+    price: 30000, category_id: category1.id, 
+    description: "The Bose 700 over-ear headphones deliver excellent noise cancellation in a comfortable, 
+    lightweight design that’s traveler friendly
     ")
-product2 = Product.create(name: "Smeg Fridge", image_url: "https://i.postimg.cc/6QVdbzVG/smeg.png",
-     price: 150000, category_id: category1.id, 
-    description: "50s style, bottom mount with no frost double cooling system refridgerator
+product2 = Product.create(name: "Anker Soundcore Life Q20", image_url: "https://i.postimg.cc/02d70hFj/anker.webp",
+     price: 4800, category_id: category1.id, 
+    description: "These over-ear wireless noise-cancelling headphones offer surprisingly decent sound, comfort,
+     and noise cancelling at a low price.
     ")
-product3 = Product.create(name: "LG 2-Door Fridge", image_url: "https://i.postimg.cc/QCfm4S3q/lg2door.png",
-    price: 56000, category_id: category1.id, 
-   description: "395L  Double Door Top Freezer With Linear Cooling Smart Inverter Compressor™ 
-   enhances energy efficiency
+product3 = Product.create(name: "1More True Wireless ANC", image_url: "https://i.postimg.cc/0Ntfdh6D/1moreanc.jpg",
+    price: 15000, category_id: category1.id, 
+   description: "1More True Wireless ANC is the best option. This pair is the most effective at reducing airplane noise, 
+   the buds are small and fit securely and comfortably in your ears, and the sound quality is quite good
    ")
-product4 = Product.create(name: "Samsung Bespoke", image_url: "https://i.postimg.cc/9MXy6C0d/samsungbespoke.png",
-    price: 107000, category_id: category1.id, 
-   description: "Samsung Bespoke fridge 323L single door fridge in glam pink.
-   Digital Inverter Compressor with a 10-Year Warranty |No Frost | All-Around Cooling  
+product4 = Product.create(name: "Galaxy Buds 2", image_url: "https://i.postimg.cc/tC2YTb83/galaxybud.jpg",
+    price: 30000, category_id: category1.id, 
+   description: " Galaxy Buds2 opens a new world of sound with well-balanced audio, lightweight comfort fit, Active 
+   Noise Cancellation, and seamless connectivity to your phone and watch
    ")
-
+product23 = Product.create(name: "Airpods Pro", image_url: "https://i.postimg.cc/Y9KSVCmH/airbud.png",
+price: 26999, category_id: category1.id, 
+description: " Active noise cancellation with Vent sytem for pressure equalization. Have fun when exercising with the 
+sweat and water resistant cover.
+")
 puts "Creating Smartphones..."
 product5 = Product.create(name: "Samsung M53", image_url: "https://i.postimg.cc/rwgH9d2c/samsungm53.jpg",
     price: 38000, category_id: category2.id, 
@@ -122,11 +130,11 @@ customer4 = Customer.create(name: "Rioba", email: "rioba@info.travel.org")
 customer5 = Customer.create(name: "Hannah", email: "hunbunny@yahoo.com")
 
 puts "Creating orders..."
-order1 = Order.create(product_id: product7.id, customer_id: customer1.id)
-order2 = Order.create(product_id: product15.id, customer_id: customer1.id)
-order3 = Order.create(product_id: product7.id, customer_id: customer2.id)
-order4 = Order.create(product_id: product1.id, customer_id: customer1.id)
-order5 = Order.create(product_id: product20.id, customer_id: customer5.id)
+order1 = Order.create(product_id: product7.id, customer_id: customer1.id, order_no: 23456)
+order2 = Order.create(product_id: product15.id, customer_id: customer1.id, order_no: 28946)
+order3 = Order.create(product_id: product7.id, customer_id: customer2.id, order_no: 358939)
+order4 = Order.create(product_id: product1.id, customer_id: customer1.id, order_no: 37548)
+order5 = Order.create(product_id: product20.id, customer_id: customer5.id, order_no: 823783)
 
 puts "✅ Done seeding!"
 
