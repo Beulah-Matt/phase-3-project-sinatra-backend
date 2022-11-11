@@ -5,7 +5,7 @@ Customer.destroy_all
 Order.destroy_all
 
 puts "Creating categories"
-category1 = Category.create(name: "fridge")
+category1 = Category.create(name: "headphone")
 category2 = Category.create(name: "smartphone")
 category3 = Category.create(name: "camera")
 category4 = Category.create(name: "laptop")
