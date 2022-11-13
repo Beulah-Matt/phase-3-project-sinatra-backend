@@ -7,6 +7,8 @@ Memebers
 3. Beulah Mathenge 
 
 # Github link: https://github.com/Beulah-Matt/phase-3-project-sinatra-backend
+             : front-end https://github.com/hafsa-nuh/E-Commerce-
+# Presentation: https://docs.google.com/presentation/d/1WhDjEp9l3l6LUlNj-c7CZr1zMDt_dRZDOxHSxbPTfbE/edit#slide=id.g70c71c87bd_0_763                
 
 # The idea
 We thought of doing an e-commerce site as it had the potential to leverage almost everything that we had learned during this phase. We built the database model with Sinatra for the API front and Active Record to query our database.
