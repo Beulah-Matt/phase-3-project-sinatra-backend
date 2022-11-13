@@ -40,13 +40,15 @@ class ApplicationController <Sinatra::Base
         products.destroy
         products.to_json
     end
-
+    
     get '/products/by_category' do 
         Product.find :all, :include => :categories, :conditions =>
             [“category.name = ?”, [“headphone”, “smartphone” ,“laptop”, “camera”]]
     end
-
+    
+    
     #orders endpoints
+
 
     get '/orders' do
         orders = Order.all
@@ -82,6 +84,7 @@ class ApplicationController <Sinatra::Base
         orders.destroy
         orders.to_json
     end
+
 
     #Customers endpoints
 
