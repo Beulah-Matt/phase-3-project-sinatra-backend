@@ -67,7 +67,7 @@ product12 = Product.create(name: "Fujifilm X-T4", image_url: "https://i.postimg.
 price: 220000, category_id: category3.id, 
 description: "26.1MP | 30fps | ISO 160 - 12800 | Intelligent Hybrid AF
 ")
-product13 = Product.create(name: "https://i.postimg.cc/tT3nD7zj/nikonZ50.jpg",
+product13 = Product.create(name: "NikonZ50", image_url:"https://i.postimg.cc/tT3nD7zj/nikonZ50.jpg",
 price: 100000, category_id: category3.id, 
 description: "20.9MP | Mirrorless | 3.1x zoom | UHD 4K resolution
 ")
