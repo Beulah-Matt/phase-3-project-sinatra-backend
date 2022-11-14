@@ -32,14 +32,52 @@ This way, we can perform Sinatra CRUD operations on all three, linking them to o
 
 We additionally queried the database for a customer name and sorted products by categories.
 
+## Deployment
+
+For this Project, we first had to install Postgres SQL as the database supported by our hosting service provider, Heroku.
+To install Postgres, we:
+1. install the Postgres package along with a -contrib package that adds some additional utilities and functionality:
+sudo apt install postgresql postgresql-contrib
+2. Ensure that the service is started:
+sudo systemctl start postgresql.service
+3. switch over to the postgres account on your server by running the following command:
+sudo -i -u postgres
+4. You can create the appropriate database with the createdb command.
+createdb databaseName
+5. Once this new account is available, you can either switch over and connect to the database by running the following:
+sudo -i -u databaseName psql
+6. Then, we had to set postgress as our default db in our sinatra project by replacing the sqlite configuration development:
+adapter: postgresql
+encoding: unicode
+database: database_name
+pool: 2
+username: your_username
+password: your_password
+production:
+adapter: postgresql
+encoding: unicode
+pool: 5
+host: <%= ENV['DATABASE_HOST'] %>
+database: <%= ENV['DATABASE_NAME'] %>
+username: <%= ENV['DATABASE_USER'] %>
+password: <%= ENV['DATABASE_PASSWORD'] %>with this:
+7. Also added the postgres gem
+gem "pg"
+Hosting on Heroku
+1. Logged in into our Heroku account using Heroku login
+2. We then created a Heroku app from the directory of this project.
+3. After, we run all our migrations using heroku rake db:migrate db:seed
+4. Our backend is now deployed
+
+
 # Setting Up.
 You can fork and clone this repo from here https://github.com/Beulah-Matt/phase-3-project-sinatra-backend.
 Next, run bundle install from the directory of this project to install all the gems and dependencies. 
 To run the server:- bundle exec rake server, then explore these endpoints on your browser
 
-Products : "http://localhost:9292/products"
-Customers: "http://localhost:9292/customers
-Orders: "http://localhost:9292/orders
+Products : https://aqueous-castle-47869.herokuapp.com/products
+Customers: https://aqueous-castle-47869.herokuapp.com/customers
+Orders: https://aqueous-castle-47869.herokuapp.com/orders
 
 You can also run bundle exec rake console to get into a  pry session and explore the data. 
 
